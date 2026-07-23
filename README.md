@@ -17,14 +17,17 @@ Cada commit corresponde a um post da série, permitindo acompanhar a evolução 
 - ✅ Versionando a API **[Camada API]**
 - ✅ Configurando Scalar na API **[Camada API]**
 
+[Post LinkedIn](https://www.linkedin.com/posts/carlos-guilherme-hackbart_github-hackbartprhackbartprapifromzero-share-7485455548684066816-urXT/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAChoIB4BrH5MVZp9KqQvngHRP8zl2o-9UDo)
+
 ---
 
-### 2º Post — Configurações e Infraestrutura
-- ⏳ Trabalhando com padrão **IOptions** para ler variáveis de ambiente e Secrets **[Camada API]**
-- ⏳ Criando um Middleware para tratamento de Exceptions **[Camada API]**
-- ⏳ Conectando a um servidor de Cache (Redis) **[Camada Infrastructure]**
-- ⏳ Criando um Middleware de Idempotência **[Camada API]**
+### 2º Post — Middlewares
+- ✅ Trabalhando com padrão **IOptions** para ler variáveis de ambiente e Secrets **[Camada API]**
+- ✅ Criando um Middleware para tratamento de Exceptions **[Camada API]**
+- ✅ Conectando a um servidor de Cache (Redis) **[Camada Infrastructure]**
+- ✅ Criando um Middleware de Idempotência **[Camada API]**
 
+*Importante*: a partir dessa etapa, será necessário rodar o comando: ``docker compose up`` na pasta da solution do projeto (root), ou subir um servidor Redis localmente.
 ---
 
 ### 3º Post — Banco de Dados

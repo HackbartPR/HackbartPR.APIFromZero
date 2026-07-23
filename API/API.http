@@ -1,13 +1,18 @@
 @API_HostAddress = https://localhost:7146
 
-# GET Authentication V1
+# GET Versionamento V1
 GET {{API_HostAddress}}/api/v1/authentication
 Accept: application/json
 
-###
-
-# GET Authentication V2
+### GET Versionamento V2
 GET {{API_HostAddress}}/api/v2/authentication
 Accept: application/json
 
-###
+### GET Exception V1
+GET {{API_HostAddress}}/api/v1/authentication/exception
+Accept: application/json
+
+### POST Idempotency V1
+POST {{API_HostAddress}}/api/v1/authentication/Idempotency
+Accept: application/json
+X-Idempotency-Key: 12
