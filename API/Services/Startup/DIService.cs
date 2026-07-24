@@ -1,4 +1,5 @@
-﻿using Infrastructure.Services.Cache;
+﻿using Infrastructure.Databases.Contexts;
+using Infrastructure.Services.Cache;
 using Infrastructure.Services.Cache.Redis;
 
 namespace API.Services.Startup
@@ -13,6 +14,7 @@ namespace API.Services.Startup
         public static IServiceCollection AddDependencies(this IServiceCollection services)
         {
             services.AddSingleton<ICacheService, RedisService>();
+            services.AddScoped<EFContext>();
 
             return services;
         }

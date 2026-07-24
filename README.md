@@ -28,12 +28,16 @@ Cada commit corresponde a um post da série, permitindo acompanhar a evolução 
 - ✅ Criando um Middleware de Idempotência **[Camada API]**
 
 *Importante*: a partir dessa etapa, será necessário rodar o comando: ``docker compose up`` na pasta da solution do projeto (root), ou subir um servidor Redis localmente.
+
+[Post LinkedIn](https://www.linkedin.com/posts/carlos-guilherme-hackbart_csharp-dotnet-aspnetcore-share-7485891263196610560-RDQW/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAChoIB4BrH5MVZp9KqQvngHRP8zl2o-9UDo)
+
 ---
 
 ### 3º Post — Banco de Dados
-- ⏳ Conectando ao Entity Framework Core **[Camada Infrastructure]**
-- ⏳ Health Check do Servidor/Banco de Dados **[Camada API]**
+- ✅ Conectando ao Entity Framework Core **[Camada Infrastructure]**
+- ✅ Health Check do Servidor/Banco de Dados **[Camada API]**
 
+*Importante*: Para testar a conexão com o banco e o HealthCheck, execute um GET para /healthz
 ---
 
 ### 4º Post — Migrations

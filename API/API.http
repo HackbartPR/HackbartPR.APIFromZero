@@ -16,3 +16,8 @@ Accept: application/json
 POST {{API_HostAddress}}/api/v1/authentication/Idempotency
 Accept: application/json
 X-Idempotency-Key: 12
+
+
+### GET HealthCheck V1
+GET {{API_HostAddress}}/healthz
+Accept: application/json
