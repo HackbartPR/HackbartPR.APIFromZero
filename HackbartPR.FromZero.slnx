@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="API/API.csproj" />
   <Project Path="Infrastructure/Infrastructure.csproj" Id="8471ac46-b19d-48a9-b71f-074f4c26c395" />
+  <Project Path="Migrator/Migrator.csproj" Id="0e74a267-79f2-49e2-8dc5-7d6b1bc16e2f" />
 </Solution>
