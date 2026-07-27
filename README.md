@@ -33,7 +33,7 @@ Cada commit corresponde a um post da série, permitindo acompanhar a evolução 
 
 ---
 
-### 3º Post — Banco de Dados
+### 3º Post — Banco de Dados Link Repositório Construindo um Base de API Profissional
 - ✅ Conectando ao Entity Framework Core **[Camada Infrastructure]**
 - ✅ Health Check do Servidor/Banco de Dados **[Camada API]**
 
@@ -41,7 +41,14 @@ Cada commit corresponde a um post da série, permitindo acompanhar a evolução 
 ---
 
 ### 4º Post — Migrations
-- ⏳ Serviço separado para execução das Migrations
+- ✅ Serviço separado para execução das Migrations
+
+*Importante*: 
+- Foi necessário iniciar com IDentity somente para podermos usarmos como exemplo as migrations de suas tabelas.
+- Para criar as migrations foi necessário rodar o comando: Add-Migration Create_IdentityTables -OutputDir Databases/Migrations
+- Para testar o Migrator, configure-o como projeto de inicialização (Provavelmente a API esteja como projeto de inicialização)
+
+*Observação*: Criar um serviço separado para Migrations, permite com que conseguimos rodá-lo na pipeline de deploy, não precisamos ter um serviço hospedado em cada instancia do nosso servidor apenas para fazer migrations. Isso permite escalar a API horizontalmente sem depender das migrations.
 
 ---
 
