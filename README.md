@@ -38,10 +38,14 @@ Cada commit corresponde a um post da série, permitindo acompanhar a evolução 
 - ✅ Health Check do Servidor/Banco de Dados **[Camada API]**
 
 *Importante*: Para testar a conexão com o banco e o HealthCheck, execute um GET para /healthz
+
+[Post LinkedIn](https://www.linkedin.com/posts/carlos-guilherme-hackbart_github-hackbartprhackbartprapifromzero-activity-7486420419214757889-gQkQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAChoIB4BrH5MVZp9KqQvngHRP8zl2o-9UDo)
 ---
 
 ### 4º Post — Migrations
 - ✅ Serviço separado para execução das Migrations
+- ✅ Iniciando com Identity para gerenciamento dos usuários **[Camada API]**
+- ✅ Personalizando a entidade User do Identity **[Camada Domain] [Camada Infrastructure]**
 
 *Importante*: 
 - Foi necessário iniciar com IDentity somente para podermos usarmos como exemplo as migrations de suas tabelas.
@@ -50,16 +54,25 @@ Cada commit corresponde a um post da série, permitindo acompanhar a evolução 
 
 *Observação*: Criar um serviço separado para Migrations, permite com que conseguimos rodá-lo na pipeline de deploy, não precisamos ter um serviço hospedado em cada instancia do nosso servidor apenas para fazer migrations. Isso permite escalar a API horizontalmente sem depender das migrations.
 
----
-
-### 5º Post — Identity
-- ⏳ Iniciando com Identity para gerenciamento dos usuários **[Camada API]**
-- ⏳ Personalizando a entidade User do Identity **[Camada Domain] [Camada Infrastructure]**
-- ⏳ Seeds para usuários iniciais **[Camada Infrastructure]**
+[Post LinkedIn](https://www.linkedin.com/posts/carlos-guilherme-hackbart_github-hackbartprhackbartprapifromzero-activity-7487542877208834049-4m9v?utm_source=share&utm_medium=member_desktop&rcm=ACoAAChoIB4BrH5MVZp9KqQvngHRP8zl2o-9UDo)
 
 ---
 
-### 6º Post — Autenticação
+### 5º Post — Seeds
+- ✅ Construindo Usuário da Camada de Domínio **[Camada Domain]**
+- ✅ Serviço de Seeds para roles e usuários iniciais **[Camada Infrastructure]**
+- ✅ Iniciando com Result Pattern **[Camada Domain]**
+- ✅ Aplicando alguns princípios do DDD **[Camada Domain]**
+
+*Importante*:
+- Para inserir as Seeds na base de dados, basta colocar o projeto Migrator como Projeto de Inicialização.
+
+*Observação*: 
+- Essa etapa mostrou uma distinção da classe que representa o Usuário no banco de dados para a classe que representa o Usuário na camada de domínio. Isso permite deixar a lógica da sua entidade desacoplada do banco de dados e manter toda as regras na camada de domínio.
+
+---
+
+### 6º Post — IDentity + Autenticação
 - ⏳ Criar endpoint de Login separado do Identity **[Camada API]**
 - ⏳ Criar endpoint de Logout separado do Identity **[Camada API]**
 - ⏳ Gerar Authentication Token e Refresh Token com JWT **[Camada API]**

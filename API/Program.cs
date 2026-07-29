@@ -7,7 +7,7 @@ builder.Services.AddControllers(); // Já vem configurado no Program.cs
 builder.Services.AddDependencies(); // Extensão criada para configurar o injetor de dependência
 builder.Services.AddAPIVersionService(); // Extensão criada para versionamento da API
 builder.Services.AddEFDatabaseService(builder.Configuration); // Extensão para configurar conexão com o banco de dados com ORM EF
-builder.Services.AddIdentityService(); //Extensão de configuração do IDentity
+builder.Services.AddIdentityService(builder.Configuration); //Extensão de configuração do IDentity
 builder.Services.AddOptionsService(builder.Configuration); // Extensão criada para configurar todos os OptionsServices
 builder.Services.AddHealthCheckService(); // Serviço de HealthCheck criado.
 

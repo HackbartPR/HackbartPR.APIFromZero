@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Migrator.Services.Migration;
+using Migrator.Services.Seeders;
 using Migrator.Services.Startup;
 
 /// <summary>
@@ -13,6 +14,8 @@ var builder = Host.CreateApplicationBuilder(args);
 
 builder.Services.AddDependencies();
 builder.Services.AddEFDatabaseService(builder.Configuration);
+builder.Services.AddIdentityService(builder.Configuration);
+builder.Services.AddOptionsService(builder.Configuration);
 
 var app = builder.Build();
 
@@ -20,3 +23,6 @@ using var scope = app.Services.CreateScope();
 
 var migrationService = scope.ServiceProvider.GetRequiredService<MigrationService>();
 await migrationService.RunAsync();
+
+var userSeedersService = scope.ServiceProvider.GetRequiredService<UserSeederService>();
+await userSeedersService.RunAsync();

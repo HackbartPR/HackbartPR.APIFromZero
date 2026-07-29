@@ -1,8 +1,10 @@
 ﻿using Infrastructure.Databases.Contexts;
 using Infrastructure.Databases.Entities.Users;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace API.Services.Startup
+namespace Migrator.Services.Startup
 {
     /// <summary>
     /// Classe criada apenas para organização, o mesmo poderia ser feito diretamente no Program.cs.

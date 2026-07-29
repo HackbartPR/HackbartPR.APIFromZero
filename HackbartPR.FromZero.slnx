@@ -1,5 +1,7 @@
 <Solution>
   <Project Path="API/API.csproj" />
+  <Project Path="Application/Application.csproj" Id="3cb4a742-4d45-45d1-b2be-06ebd604c3c8" />
+  <Project Path="Domain/Domain.csproj" Id="531c7d1a-cb90-4b61-b68e-e25046110317" />
   <Project Path="Infrastructure/Infrastructure.csproj" Id="8471ac46-b19d-48a9-b71f-074f4c26c395" />
   <Project Path="Migrator/Migrator.csproj" Id="0e74a267-79f2-49e2-8dc5-7d6b1bc16e2f" />
 </Solution>

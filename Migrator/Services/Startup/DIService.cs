@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Migrator.Services.Migration;
+using Migrator.Services.Seeders;
 
 namespace Migrator.Services.Startup
 {
@@ -13,6 +14,7 @@ namespace Migrator.Services.Startup
         public static IServiceCollection AddDependencies(this IServiceCollection services)
         {
             services.AddScoped<MigrationService>();
+            services.AddScoped<UserSeederService>();
 
             return services;
         }
