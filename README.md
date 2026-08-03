@@ -70,14 +70,19 @@ Cada commit corresponde a um post da série, permitindo acompanhar a evolução 
 *Observação*: 
 - Essa etapa mostrou uma distinção da classe que representa o Usuário no banco de dados para a classe que representa o Usuário na camada de domínio. Isso permite deixar a lógica da sua entidade desacoplada do banco de dados e manter toda as regras na camada de domínio.
 
+[Post LinkedIn](https://www.linkedin.com/posts/carlos-guilherme-hackbart_developer-programador-desenvolvedor-share-7488315142020083712--_sO/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAChoIB4BrH5MVZp9KqQvngHRP8zl2o-9UDo)
+
 ---
 
 ### 6º Post — IDentity + Autenticação
-- ⏳ Criar endpoint de Login separado do Identity **[Camada API]**
-- ⏳ Criar endpoint de Logout separado do Identity **[Camada API]**
-- ⏳ Gerar Authentication Token e Refresh Token com JWT **[Camada API]**
-- ⏳ Criar Cookie HttpOnly para armazenar o JWT **[Camada API]**
-- ⏳ Criar endpoint de Refresh Token separado do Identity **[Camada API]**
+- ✅ Criar endpoint de Login separado do Identity **[Camada API]**
+- ✅ Criar endpoint de Logout separado do Identity **[Camada API]**
+- ✅ Gerar Authentication Token e Refresh Token com JWT **[Camada API]**
+- ✅ Criar Cookie HttpOnly para armazenar o JWT **[Camada API]**
+- ✅ Criar endpoint de Refresh Token separado do Identity **[Camada API]**
+
+*Importante*:
+- O Scalar não facilita trabalhar com Cookies, portanto para testar via Scalar será necessário abrir o Dev Tools e verificar/pegar o Cookie que foi salvo no navegador e inserir na requisição.
 
 ---
 

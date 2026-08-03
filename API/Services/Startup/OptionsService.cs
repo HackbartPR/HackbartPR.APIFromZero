@@ -1,4 +1,5 @@
 ﻿using API.Middlewares.Idempotency.Settings;
+using API.Services.JWT.Settings;
 using Infrastructure.Services.Cache.Settings;
 
 namespace API.Services.Startup
@@ -13,6 +14,7 @@ namespace API.Services.Startup
         {
             services.Configure<CacheServiceOptions>(configuration.GetSection(CacheServiceOptions.Identifier));
             services.Configure<IdempotencyOptions>(configuration.GetSection(IdempotencyOptions.Identifier));
+            services.Configure<JWTOptions>(configuration.GetSection(JWTOptions.Identifier));
 
             return services;
         }

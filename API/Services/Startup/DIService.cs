@@ -1,4 +1,6 @@
-﻿using Infrastructure.Databases.Contexts;
+﻿using API.Services.Authentication;
+using API.Services.JWT;
+using Infrastructure.Databases.Contexts;
 using Infrastructure.Services.Cache;
 using Infrastructure.Services.Cache.Redis;
 
@@ -13,8 +15,11 @@ namespace API.Services.Startup
     {
         public static IServiceCollection AddDependencies(this IServiceCollection services)
         {
-            services.AddSingleton<ICacheService, RedisService>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IJWTService, JWTService>();
             services.AddScoped<EFContext>();
+
+            services.AddSingleton<ICacheService, RedisService>();
 
             return services;
         }

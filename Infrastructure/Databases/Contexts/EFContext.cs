@@ -1,4 +1,5 @@
-﻿using Infrastructure.Databases.Entities.Users;
+﻿using Infrastructure.Databases.Entities.Token;
+using Infrastructure.Databases.Entities.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,8 @@ namespace Infrastructure.Databases.Contexts
     /// <param name="options"></param>
     public class EFContext(DbContextOptions<EFContext> options) : IdentityDbContext<UserDB, IdentityRole<Guid>, Guid>(options)
     {
+        public DbSet<RefreshTokenDB> RefreshTokens { get; set; }
+
         /// <summary>
         /// Método responsável por definir as configurações das tabelas que serão salvas no banco de dados.
         /// No momento, não possui nenhum configuração.
@@ -26,6 +29,10 @@ namespace Infrastructure.Databases.Contexts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            var refreshToken = builder.Entity<RefreshTokenDB>();
+            refreshToken.Property(r => r.Token).HasMaxLength(256).IsRequired();
+            refreshToken.Property(r => r.Jti).HasMaxLength(256).IsRequired();
         }
     }
 }

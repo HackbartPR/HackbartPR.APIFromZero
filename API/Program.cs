@@ -9,6 +9,7 @@ builder.Services.AddAPIVersionService(); // Extensão criada para versionamento 
 builder.Services.AddEFDatabaseService(builder.Configuration); // Extensão para configurar conexão com o banco de dados com ORM EF
 builder.Services.AddIdentityService(builder.Configuration); //Extensão de configuração do IDentity
 builder.Services.AddOptionsService(builder.Configuration); // Extensão criada para configurar todos os OptionsServices
+builder.Services.AddJWTAuthentication(builder.Configuration); // Extensão criada para configurar login via JWT
 builder.Services.AddHealthCheckService(); // Serviço de HealthCheck criado.
 
 var app = builder.Build();
@@ -23,6 +24,8 @@ if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
 app.UseHttpsRedirection();
 
 app.UseIdempotencyHandler(); //Middleware de Idempotencia.
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
